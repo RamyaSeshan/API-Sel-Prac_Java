@@ -4,6 +4,23 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class StriaghtLine_LC_1232 {
+	
+	/*
+	 * PSUEDO CODE 
+	 * Input  2 dim int array
+	 * Output -- boolean value 
+	 * 
+	 * Solution Known : Yes 
+	 * Alternate / additional approach : NO 
+	 * 
+	 * Logic:
+	 * dec 2 dimetional array 
+	 * in for loop till lenght of 2 dim array row lenght 
+	 *   check (A[i][0] != A[i-1][0]+1  ||  A[i][1] != A[i-1][1]+1) , return false 
+	 *   (ie) always x cordinate equala prior x co -or +1 AND Y co or equals prioe Y cor +1 
+	 * otherwise , post completion of for loop , return true
+	 *   
+	 */
 
 	public boolean TwoDimArray(int[][] A)
 	{
