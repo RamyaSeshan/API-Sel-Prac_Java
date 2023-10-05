@@ -1,5 +1,8 @@
 package mandatoryHomeWork.Week10.Day3;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.junit.Test;
 
  // https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/
@@ -13,7 +16,7 @@ import org.junit.Test;
  */
 public class Panagram_Sen_LC_1832 {
 	
-public boolean checkIfPangram(String sentence) {
+public boolean checkIfPangram1(String sentence) {
 	
 	boolean[] panagram = new boolean[26];
 	
@@ -22,14 +25,28 @@ public boolean checkIfPangram(String sentence) {
 		if (b != ' ')
 		{panagram[b-'a'] = true;}
       }
-	
-	
+		
 	for (boolean b : panagram) {
 		if(!b) {return false ;}
      	}
 	
 	return true;
         
+    }
+
+
+     public boolean checkIfPangram(String sentence) {
+	
+	Set<Character> setPana = new HashSet<Character>();
+	
+	for (Character character : sentence.toCharArray())
+	{
+		if(character != ' ' &&  ! setPana.contains(character))
+		{setPana.add(character); }
+	} 
+	
+	if(setPana.size() == 26 ) return true;
+	else return false;
     }
 
 
