@@ -4,25 +4,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
+ // https://leetcode.com/problems/jewels-and-stones/submissions/
 
-public class Jewels_stones_LC_771 {
-	
-public int numJewelsInStones1(String jewels, String stones) {
-        
-	int count =0 ; 
-	
-	Set<Character> setStone = new HashSet<Character>();
-	
-     for (int i = 0; i < stones.length(); i++) {    	 
-    	 setStone.add(stones.charAt(i));
-         }
-	
-     for (int i = 0; i < jewels.length(); i++) {    	 
-    	 if(setStone.contains(jewels.charAt(i))) count++;   		 
-	     }
-     
-	return count;
-    }
+/*
+ * Psuedo Code 
+ *   1. Add the jewels to a set 
+ *   2.Iterate thur Stones and check if stone is in Set Jewel , then incremet the counmt
+ *   3.return count
+ */
+
+public class Jewels_stones_LC_771 {		
+
 public int numJewelsInStones(String jewels, String stones) 
 {
 	
