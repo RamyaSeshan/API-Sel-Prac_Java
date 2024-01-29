@@ -24,16 +24,15 @@ public class Max_String_Pairs_LC_2744 {
 		 if (words.length ==1 ) { return 0 ;} 
 		 int count = 0 ,left =0 , right = left + 1; 
 		 StringBuffer A = new StringBuffer();
-		 
-		 String temp ="";
+		 StringBuffer B = new StringBuffer();
+		
 		 
 		while( right <= words.length -1   )
 		{
-			 temp = words[left] ;			 
-			 A.append(words[right]) ;
-			 A.reverse() ;
-			 
-			 if(temp.equals(A.toString())) 
+			B.append(words[left] );		 
+			 A.append(words[right]).reverse();
+			 			 
+			 if(B.toString().equals(A.toString())) 
 			 { 
 				 count ++ ; 
 				 left = left + 1 ; right = left + 1 ; 
@@ -44,7 +43,8 @@ public class Max_String_Pairs_LC_2744 {
 				 if (right > words.length -1 )  {left ++; right = left +1  ; }
 				 } 
 			
-			 A.setLength(0);	 
+			 A.setLength(0);
+			 B.setLength(0);
 			}
 		 return count;
 	 }
