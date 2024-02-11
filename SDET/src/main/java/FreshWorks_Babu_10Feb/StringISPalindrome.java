@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class StringISPalindrome {
 	
-	// Que : Can we form an Anagram with the given String 
+	// Que : Can we form an Palindrome with the given String 
 	
 	/*
 	 * Logic is , if we have 2 or more Key with their respective ( value %2 !=0  ) >=2  ie odd count of charatcers  , then we cant form an anagram 
@@ -18,12 +18,12 @@ public class StringISPalindrome {
 	{
 		//String s = "amma" ;
 		String s = "madamsdd" ;
-		Boolean findAnagram = findAnagram(s) ;
+		Boolean findAnagram = findPalindrome(s) ;
 		System.out.println(  " findAnagram   " + findAnagram);
 
 	}
 
-	public Boolean findAnagram_Map(String s) 
+	public Boolean findPalindrome_Map(String s) 
 	{
 		Map<Character , Integer> map = new HashMap<Character, Integer>() ;
 		int count =0;
@@ -44,7 +44,7 @@ public class StringISPalindrome {
 	}
 
 	
-	public Boolean findAnagram(String s) 
+	public Boolean findPalindrome(String s) 
 	{
 		int[] A = new int[26] ;
 		int count =0;
