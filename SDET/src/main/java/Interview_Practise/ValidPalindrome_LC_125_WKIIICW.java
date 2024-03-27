@@ -47,8 +47,7 @@ public class ValidPalindrome_LC_125_WKIIICW
         	 if(lowerCaseStr.charAt(left) !=  lowerCaseStr.charAt(right)) return false ;
         	 left ++;
         	 right -- ;
-         }
-         
+         }         
          return true;
 	}
 }
