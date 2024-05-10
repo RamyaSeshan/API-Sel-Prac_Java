@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class JsonGetter_Serialize 
+public class JsonPropertyOrder_Serialize 
 {
 	
 	public static void main(String[] args) throws JsonProcessingException 
@@ -25,14 +25,13 @@ public class JsonGetter_Serialize
 		String writeValueAsString = obj.writerWithDefaultPrettyPrinter().writeValueAsString(jsonAGetter_POJO) ;
 		System.out.println(writeValueAsString);
 		
-		// if you run this , in the output we will get key as defined as private fileds in JsonAGetter_POJO class
-		// if in case you want that to be flexible , meaning filed to be diffrent than the JSON key name 
-		// then in that getter method , we can use ANNOTATION JSONGETER with value as required String 
-		/*eg : @JsonGetter(value = "Employee Name ")
-		public String getFirstName() {
-			return FirstName;
-		} */
-		
+		/*
+		 * IN general , when we Serialize  , created JOSN keys will be in the order of the priivate properties in JSON class
+		 * but if we use JSONPRPOPRTYORDER attribute with attribue alphabetic  =true , then in created JSON Keys will be alphabatical order
+		 * if we specify @JsonPropertyOrder("First Name","LastName","email") , then in craeted JSON keys will be in this order
+		 * if in case we have annotation @JSONGetter for a specific getter with JSONPRPOPRTYORDER , 
+		 * @JSONGetter takes precedence over private propertie when implemented alongwith JSONPRPOPRTYORDER annotation
+		 */
 		
 	} 
 	
