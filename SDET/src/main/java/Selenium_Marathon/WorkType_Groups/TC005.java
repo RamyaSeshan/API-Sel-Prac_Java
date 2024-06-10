@@ -15,7 +15,7 @@ public class TC005 {
 
 
 	@Test
-	public void CreateWork_Type_Group() throws InterruptedException //
+	public void CreateWork_Type_Group() throws InterruptedException 
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
@@ -32,7 +32,7 @@ public class TC005 {
 
 		driver.findElement(By.xpath("//div[@role='navigation']")).click();
 		driver.findElement(By.xpath("//button[@aria-label='View All Applications']")).click();
-		
+
 		WebElement WT_Groups = driver.findElement(By.xpath("//p[text()='Work Type Groups']"));
 		wait.until(ExpectedConditions.visibilityOf(WT_Groups));
 		Actions act = new Actions(driver);
@@ -42,8 +42,9 @@ public class TC005 {
 		driver.findElement(By.xpath("(//a[@class='toggle slds-th__action slds-text-link--reset '])[1]")).click();
 
 		//TBD	
-		 wait.until(ExpectedConditions.textToBe(By.xpath("//th[@title='Work Type Group Name']/div/span"), "Sorted Ascending"));
-
+		wait.until(ExpectedConditions.textToBe(By.xpath("//th[@title='Work Type Group Name']/div/span"), "Sorted Ascending"));
+		String text = driver.findElement(By.xpath("//th[@title='Work Type Group Name']/div/span")).getText();
+		System.out.println(text);
 
 
 	}

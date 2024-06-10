@@ -2,7 +2,7 @@ package Interview_Practise;
 
 import org.junit.Test;
 
-public class FaultyKeyboard_LC_2810 
+public class FaultyKeyboard_LC_2810_WK7_Day1 
 {
 	@Test
 	public void test1()

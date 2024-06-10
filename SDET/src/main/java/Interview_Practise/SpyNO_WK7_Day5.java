@@ -23,9 +23,7 @@ public class SpyNO_WK7_Day5
 		while (num > 0) 
 		{
 			quo = num %10;
-			rem = num /10 ;
-			System.out.println(" quo is   " +quo);
-			System.out.println(" rem is   " +rem);
+			rem = num /10 ;		
 			sum = sum + quo ;
 			prod = prod * quo ;
 			num = rem ;			

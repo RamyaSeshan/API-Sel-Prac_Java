@@ -29,10 +29,8 @@ public class ArrangeCoins_LC441_WKII_CW {
 	
 	public int arrangeCoins(int n) 
 	{
-		int left =0 , right = n , mid , k;
-		
-		
-		
+		int left =0 , right = n , mid , k;	
+				
 		while (left  <= right )
 		{
 			mid = left +   (right - left ) /2  ;

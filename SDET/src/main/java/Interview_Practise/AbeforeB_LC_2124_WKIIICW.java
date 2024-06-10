@@ -42,7 +42,7 @@ public class AbeforeB_LC_2124_WKIIICW
 	public boolean checkString(String s) 
 	{
 		int indexOf = s.indexOf("b");
-		if (indexOf == -1 ) return false ;
+		if (indexOf == -1 ) return true ;  // if no b present , return true 
 		int i =  indexOf + 1 ;
 
 

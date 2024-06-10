@@ -33,7 +33,7 @@ public class StringAcronym_LC_2828 {
 
 		public boolean  isAcronym(List<String> words, String s)
 		{		
-			if(words.size() != s.length() ) { return false ;}	
+			if(words.size() != s.length() || words.size() < s.length()) { return false ;}	
 			
 			for (int i = 0; i < words.size(); i++) {		
 			if(s.charAt(i) !=words.get(i).charAt(0))
@@ -45,8 +45,8 @@ public class StringAcronym_LC_2828 {
 		@Test
 		public void Test1()
 		{
-			String[] w =  {"India" , "China", "America" };
-			List<String> words =  new ArrayList<String>(Arrays.asList(w));
+			//String[] w =  {"India" , "China", "America" };
+			List<String> words =  new ArrayList<String>( Arrays.asList("India" , "China", "America" ) );
 			boolean acronym = isAcronym( words, "ICA") ;
 			System.out.println(acronym);			
 		}
@@ -75,5 +75,27 @@ public class StringAcronym_LC_2828 {
 			System.out.println(acronym);			
 		}
 		
+		@Test
+		public void Test5()
+		{	String[] w =  {"alice","bob","charlie"};
+			List<String> words =  new ArrayList<String>(Arrays.asList(w));
+			boolean acronym = isAcronym( words, "abc") ;
+			System.out.println(acronym);			
+		}	
 		
+		@Test
+		public void Test6()
+		{	String[] w =  {"an","apple"};
+			List<String> words =  new ArrayList<String>(Arrays.asList(w));
+			boolean acronym = isAcronym( words, "a") ;
+			System.out.println(acronym);			
+		}	
+		
+		@Test
+		public void Test7()
+		{	String[] w =  {"never","gonna","give","up","on","you"};
+			List<String> words =  new ArrayList<String>(Arrays.asList(w));
+			boolean acronym = isAcronym( words, "ngguoy") ;
+			System.out.println(acronym);			
+		}		
 }

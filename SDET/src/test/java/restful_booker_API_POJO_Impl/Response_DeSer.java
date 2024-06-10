@@ -4,7 +4,7 @@ public class Response_DeSer {
 	private int bookingid;
 	private CreateBooking_Pojo booking;
 	
-	public Response_DeSer( )
+	public Response_DeSer( ) //
 	{			
 	}
 	

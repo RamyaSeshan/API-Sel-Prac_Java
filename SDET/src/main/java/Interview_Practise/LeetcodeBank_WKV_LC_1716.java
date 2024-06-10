@@ -63,7 +63,7 @@ public class LeetcodeBank_WKV_LC_1716
 
 	}
 
-	public int totalMoney(int n)
+	public int totalMoney(int n) // took 1 ms 
 	{
 		int intial = 1 , start = intial  , sum = 0 ; 
 	    

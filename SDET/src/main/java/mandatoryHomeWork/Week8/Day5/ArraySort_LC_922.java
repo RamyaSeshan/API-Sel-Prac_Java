@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-//https://leetcode.com/problems/sort-array-by-parity-ii/description/
+	//https://leetcode.com/problems/sort-array-by-parity-ii/description/
 
 /*
 Time & Space Complexity -- O[N]
@@ -86,7 +86,7 @@ public int[] sortArrayByParityII(int[] nums) {
 @Test
 public void Test1()
 {
-	int[] nums = {4,2,5,7};
+	int[] nums = {4,2,5,7};  // 4 2 7 5 
 	int[] sortArrayByParityII = sortArrayByParityII( nums) ;
 	System.out.println(Arrays.toString(sortArrayByParityII));
 }

@@ -8,6 +8,7 @@ import org.junit.Test;
  // https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/
 
 /*
+ *  Time Complexity = O[N ] + O[N]  Space Compleity - O[N] 
  * Psuedo code
  * add the charatxers of Stirng to an boolean array
  * iterate and check if boolean array has value false , then return flase 
@@ -16,7 +17,7 @@ import org.junit.Test;
  */
 public class Panagram_Sen_LC_1832 {
 	
-public boolean checkIfPangram1(String sentence) {
+public boolean checkIfPangram(String sentence) { // takes 1 ms 
 	
 	boolean[] panagram = new boolean[26];
 	
@@ -35,7 +36,7 @@ public boolean checkIfPangram1(String sentence) {
     }
 
 
-     public boolean checkIfPangram(String sentence) {
+     public boolean checkIfPangram1(String sentence) { // takes 3 ms 
 	
 	Set<Character> setPana = new HashSet<Character>();
 	

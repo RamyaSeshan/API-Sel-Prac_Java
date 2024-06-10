@@ -1,4 +1,4 @@
-	package mandatoryHomeWork.Week13.Day1;
+	package mandatoryHomeWork.Week15.Day1;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ public class MajorityElement_LC_169 {
 		
 	//https://leetcode.com/problems/majority-element/
 	
-	/*
+	/*  Time Comlexity O[N]  ; Space Complexity O[1]
 	 * PSUEDO CODE 
 	 * declate var max =0 
 	 * declare a map , have key as Arrayele and have counter in vlaue 

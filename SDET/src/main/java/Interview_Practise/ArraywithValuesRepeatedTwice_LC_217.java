@@ -35,7 +35,7 @@ public class ArraywithValuesRepeatedTwice_LC_217
 		System.out.println( " test 3  " + containsDuplicate );
 
 	}
-	public boolean containsDuplicate_1(int[] nums) {
+	public boolean containsDuplicate_1(int[] nums) { // took 9 ms 
 
 		Set<Integer> set = new HashSet<Integer>() ;
 
@@ -50,7 +50,7 @@ public class ArraywithValuesRepeatedTwice_LC_217
 	}
 	
 	
-	public boolean containsDuplicate(int[] nums) 
+	public boolean containsDuplicate(int[] nums)  // took 19 ms 
 	{
 		Arrays.sort(nums);
 		

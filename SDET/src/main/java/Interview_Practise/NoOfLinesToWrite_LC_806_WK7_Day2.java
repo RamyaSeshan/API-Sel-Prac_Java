@@ -65,8 +65,7 @@ public class NoOfLinesToWrite_LC_806_WK7_Day2
 				 lineCount = lineCount +1 ;
 				 rowWidth =  widths[s.charAt(i) - 'a' ] ;				 
 			 }
-		 }
-		 		 
+		 }		 		 
 		 return new int[] { ++lineCount , rowWidth };
 		 
 	 }

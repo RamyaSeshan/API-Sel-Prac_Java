@@ -8,6 +8,7 @@ import org.junit.Test;
 
 public class ArrayDuplicate {
 
+	// Time Complexity O[1] , SPace Complexity O[N]
 
 	@Test
 	public void test1()

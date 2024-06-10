@@ -46,7 +46,7 @@ public class Number_Consistent_Strings_LC_1684_Week10_Day4
 			set.add(allowed.charAt(i)) ;
 		}
 
-		System.out.println(set);
+		//System.out.println(set);
 
 		for (int i = 0; i < words.length; i++) 
 		{

@@ -34,5 +34,33 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/ramya/.m2/repository/org/testng/testng/7.5/testng-7.5.jar" sourcepath="C:/Users/ramya/.m2/repository/org/testng/testng/7.5/testng-7.5-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.testng"/>
+			<attribute name="maven.artifactId" value="testng"/>
+			<attribute name="maven.version" value="7.5"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/ramya/.m2/repository/com/github/tomakehurst/wiremock-jre8/2.35.0/wiremock-jre8-2.35.0.jar" sourcepath="C:/Users/ramya/.m2/repository/com/github/tomakehurst/wiremock-jre8/2.35.0/wiremock-jre8-2.35.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.groupId" value="com.github.tomakehurst"/>
+			<attribute name="maven.artifactId" value="wiremock-jre8"/>
+			<attribute name="maven.version" value="2.35.0"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/ramya/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar" sourcepath="C:/Users/ramya/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="io.rest-assured"/>
+			<attribute name="maven.artifactId" value="rest-assured"/>
+			<attribute name="maven.version" value="5.3.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,0 +1,1 @@
+package JackSonAnnotations_CustSerilization;

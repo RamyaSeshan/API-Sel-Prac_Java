@@ -10,8 +10,12 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+// https://testng.org/doc/documentation-main.html
+
+
 public class Parent {
-	
+
+	/*
 @BeforeSuite //@BeforeSuite: The annotated method will be run before all tests in this suite have run.
 public void beforeSuite()
 {
@@ -24,19 +28,22 @@ public void AfterSuite()
 	System.out.println(" Method from @AfterSuite------ **** ");
 }
 
+*/
+
 @Test
 
-public void testanno()
+public void parentTesta()
 {
 	System.out.println(" Method from @Test----MAIN-- ****** ");
 }
 
 @Test
-public void test1()
+public void parentTestb()
 {
-	System.out.println(" Method from @Test---TEST 1--- ****** ");
+	System.out.println(" Method from @Test---TEST 1 from Parent -- ****** ");
 }
 
+/*
 @BeforeTest //@BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run.
 public void beforeTest()
 {
@@ -75,6 +82,6 @@ public void afterMethod()
 {
 	System.out.println(" Method from @AfterMethod/------ ****** ");
 }
-
+*/
 
 }

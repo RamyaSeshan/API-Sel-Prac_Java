@@ -83,7 +83,7 @@ public class Validstr_LC_2645 {
 	
 public int addMinimum(String word) {
 	
-	int n = word.length()  ;int i=0 ;  int counter =0;  int reqCnt =3; int totalDigi =0 ;// aaa
+	int n = word.length()  ;int i=0 ;  int counter =0;  int reqCnt =3; int totalDigi =0 ;// aaa , abc
 
 			while (i < n)
 			{
@@ -115,7 +115,7 @@ public void Test1()
 {
 	String word ="abc";
 	int addMinimum = addMinimum( word) ;
-	System.out.println(addMinimum);		
+	System.out.println( " abc   " +addMinimum);		
 }
 
 @Test

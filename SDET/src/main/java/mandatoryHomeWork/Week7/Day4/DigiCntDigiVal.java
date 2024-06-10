@@ -2,6 +2,8 @@ package mandatoryHomeWork.Week7.Day4;
 
 import org.junit.Test;
 
+// https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value
+
 public class DigiCntDigiVal {
 
 	

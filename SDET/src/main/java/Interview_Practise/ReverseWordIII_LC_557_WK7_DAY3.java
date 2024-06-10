@@ -53,8 +53,7 @@ public class ReverseWordIII_LC_557_WK7_DAY3
     	   charArray[start] = charArray[i] ;
     	   charArray[i] = temp ;
     	   start ++ ; i -- ;
-       }
-       
+       }       
 		return charArray ;
 	}
 	

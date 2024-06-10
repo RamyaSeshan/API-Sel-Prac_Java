@@ -18,8 +18,7 @@ public class Sum_unique_elements_LC_1748 {
 	 * Psuedo Code
 	 *   Iterate and add values to map
 	 *   Again Iterate thru Map.Entry , check if value 1 exixts , then add its corresponding key to count
-	 *   return count 
-	 * 
+	 *   return count  * 
 	 *
 	 */
 	

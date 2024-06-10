@@ -1,0 +1,168 @@
+Agenda:
+======
+
+1) Mocking API's
+
+Mimics some action
+Stunt double 
+Test Doubles
+
+Not a Real API
+Integration Testing
+Simulators --Stub and Driver
+Top Down Approach --Stubs
+Bottom Up Approach --Driver
+
+Mocking API's:
+===============
+
+Fake --Replicates the exact system
+Stub  --Giving you the static response
+mock -- fake+stub (Dynamic Response)
+
+1) Third Party API's
+2) API is not ready for testing
+
+InSprint Automation
+
+Dev is Inprogress, Yet to start development
+
+API Documentation
+
+Development of API scripts will be started mock
+
+Service providers --Easymock,powermock and wire mock
+
+RestAssured:
+===========
+RestAssured is java library for api automation
+Testing API's
+
+C# --Rest Sharp
+python -pytest
+
+Open source
+Community support
+BDD style
+Hamcrest --Inbuild Assertions
+
+Steps:
+=====
+1) Create a Maven Project 
+2) Add the below dependencies
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.5</version>
+		</dependency>
+  <groupId>com.github.tomakehurst</groupId>
+  <artifactId>wiremock-jre8</artifactId>
+  <version>2.35.0</version>
+  <scope>test</scope>
+</dependency>
+
+3) Make wiremock server up --https://wiremock.org/docs/download-and-installation/
+Go to the path where wiremock server is downloaded and run the below command from the command prompt
+java -jar wiremock-jre8-standalone-2.35.0.jar
+
+
+
+
+In command prompt run the below commands
+
+1) netstat -ano | findstr :8080
+2) From the output of first command get the PID and run
+taskkill /f /pid pidnumber
+
+Wiremock
+
+Preconditions:
+==============
+
+1) Go to the documentation of wiremock --https://wiremock.org/docs/
+
+2) Download and install wiremock server --https://wiremock.org/docs/download-and-installation/
+
+3) Make the wiremock server up
+java -jar wiremock-jre8-standalone-2.35.0.jar
+
+4) Add the wiremock dependency in the pom.xml file
+
+<!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
+<dependency>
+    <groupId>com.github.tomakehurst</groupId>
+    <artifactId>wiremock</artifactId>
+    <version>3.0.0-beta-10</version>
+    <scope>test</scope>
+</dependency>
+
+
+1) Stub
+2) Recording in wiremock
+3) Dynamic Templates
+
+Steps for Recording:
+====================
+
+1) Access the https://wiremock.org/docs/record-playback/
+2) Access -http://localhost:8080/__admin/recorder
+which is the wiremock recorder
+3)Add service now url
+https://dev90367.service-now.com
+
+*Assignment*
+
+1) Create a Stub for Post call in to create Incident
+Run the API request to ensure that response is displayed from 
+Stub
+2) Record the Get all incidents and initiate request without
+Authentication after recording the template
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2) Schema validation
+

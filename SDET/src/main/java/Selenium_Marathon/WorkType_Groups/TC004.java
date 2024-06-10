@@ -16,7 +16,7 @@ public class TC004 {
 
 
 	@Test
-	public void CreateWork_Validate_Inline_Error() throws InterruptedException //
+	public void CreateWork_Validate_Inline_Error() throws InterruptedException 
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
@@ -46,7 +46,10 @@ public class TC004 {
 		WebElement Work_Grp_Type = driver.findElement(By.xpath("//button[@role='combobox']"));
 		driver.executeScript("arguments[0].click();", Work_Grp_Type);
 
-		driver.findElement(By.xpath("//span[@title='Capacity']")).click();		
+		WebElement dd_Capacity = driver.findElement(By.xpath("//span[@title='Capacity']"));
+		wait.until((ExpectedConditions.elementToBeClickable(dd_Capacity)));
+		driver.executeScript("arguments[0].click();", dd_Capacity);
+		//dd_Capacity.click();
 
 		String Inline_Error  = driver.findElement(By.xpath("(//div[@role='alert'])[1] ")).getText();
 		System.out.println(Inline_Error);

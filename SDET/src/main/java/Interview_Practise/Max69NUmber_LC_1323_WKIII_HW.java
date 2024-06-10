@@ -14,7 +14,7 @@ public class Max69NUmber_LC_1323_WKIII_HW
 		int maximum69Number = maximum69Number ( num) ;
 		System.out.println( " test1 -- " +maximum69Number);
 	}
-	
+
 	@Test
 	public void test2()
 	{
@@ -22,7 +22,7 @@ public class Max69NUmber_LC_1323_WKIII_HW
 		int maximum69Number = maximum69Number ( num) ;
 		System.out.println( " test2 -- " +maximum69Number);
 	}
-	
+
 	@Test
 	public void test3()
 	{
@@ -30,9 +30,9 @@ public class Max69NUmber_LC_1323_WKIII_HW
 		int maximum69Number = maximum69Number ( num) ;
 		System.out.println( " test3 -- " +maximum69Number);
 	}
-	
+
 	@Test
-	
+
 	public void test4()
 	{
 		int num = 9999 ;
@@ -40,24 +40,24 @@ public class Max69NUmber_LC_1323_WKIII_HW
 		System.out.println( " test4 -- " +maximum69Number);
 	}
 
-	private int maximum69Number(int num) {
-		
+	private int maximum69Number_BF(int num) {
+
 		String strNum = String.valueOf(num) ;
 		//System.out.println(strNum);
 		char[] charArray = strNum.toCharArray() ;
-		
+
 		int parseInt ;
 		int max = num ;
-		
-		 //System.out.print( " ------------------------- " );
-		 
+
+		//System.out.print( " ------------------------- " );
+
 		for (int i = 0; i < charArray.length; i++)  
 		{
 			if (charArray[i] == '6')
 			{
 				charArray[i] = '9';
 				parseInt = Integer.parseInt(String.valueOf(charArray))  ;
-				 //System.out.print( " parseInt of 6 " + parseInt);
+				//System.out.print( " parseInt of 6 " + parseInt);
 				max = Math.max(max, parseInt) ;
 				charArray[i] = '6';
 			}
@@ -69,10 +69,8 @@ public class Max69NUmber_LC_1323_WKIII_HW
 				max = Math.max(max, parseInt) ;
 				charArray[i] = '9';
 			}
-		}
-		
+		}		
 		return max;
-
 	}
 
 }

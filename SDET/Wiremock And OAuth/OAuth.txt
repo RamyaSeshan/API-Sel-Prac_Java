@@ -1,0 +1,58 @@
+Agenda for the day:
+===================
+
+1) Learn OAuth
+
+Open Authorization
+Multilayer Authentication
+Restricted Access
+
+Spotify 
+
+
+Service Now is providing an API to generate the access token
+
+
+1) Precondition to generate access token --Client ID , Client Secret
+
+Client ID-5e121ee4596c31105605c6382e59761c
+Client Secret -y7W~[by1(G
+
+2) Generating Access Token
+
+
+3) Using the Access Token in the API'srequest
+
+Settings for OAuth in Service now (Real Time Development team /Admin)--Client and Client Secret
+============================================================
+1) Login to Service now
+2) Filter Navigator type OAuth
+3) Select Application Registry from the displayed options
+4)  Click on new and click Create an OAuth API endpoint for external clients
+5) Give any meaningful name
+6) Copy the Client ID 6ca34ee37e3361108e36f56f3964ddc9
+7) Give the Redirect url (to which client access token is sent back)
+https://www.getpostman.com/oauth2/callback
+8) Once again search with name given in point 5  and copy the client secret  (^o?dV,uKJ
+
+TestOAuthApril23
+
+Client ID--f5ede15dd8f22110ed658bbb54aaeb18
+Client Secret-)J3:z4Fi([
+
+2)API's to generate the Access Token
+==================================
+Refer the below documentation
+
+https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0778194
+
+
+3) Using the Access Token in the API'srequest
+
+
+Z1XrM2cuuZBZKji-NpHWMvAS6caimk81ngU8UEf4OJLTZqb0qh_EGEW4P7T1T0zv_WhcN2CZr9NVBFZ2bTVSBg
+
+
+
+
+

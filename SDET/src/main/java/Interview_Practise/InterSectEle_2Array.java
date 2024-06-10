@@ -8,6 +8,8 @@ import org.junit.Test;
 
 public class InterSectEle_2Array {
 	
+	// Time Complexity O[N] , SPace Complexity O[N]
+	
 	@Test
 	public void test1()
 	{

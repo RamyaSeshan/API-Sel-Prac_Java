@@ -37,6 +37,16 @@ When finished, convert the character array to string
 		//reverse_WithSpace(str) ;
 	}
 
+	
+
+	@Test
+	public void test2()
+	{
+		String str = "I am happy engineer    YX";
+		String reverse_WithSpace = reverse_WithSpace(str) ;
+		System.out.println(reverse_WithSpace);
+		//reverse_WithSpace(str) ;
+	}  
 	private String reverse_WithSpace(String s) {
 		
 		int left =0 , right = 0;

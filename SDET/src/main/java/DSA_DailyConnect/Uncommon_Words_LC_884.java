@@ -8,6 +8,9 @@ import java.util.Map;
 
 import org.junit.Test;
 
+//https://leetcode.com/problems/uncommon-words-from-two-sentences/
+ // Daily connect -- sep 29
+
 public class Uncommon_Words_LC_884 {
 	
 	 public String[] uncommonFromSentences(String s1, String s2) {
@@ -20,7 +23,10 @@ public class Uncommon_Words_LC_884 {
 		 Map<String , Integer> mapA = new  HashMap<String , Integer> ();  
 		 Map<String , Integer> mapB = new  HashMap<String , Integer> ();
 		 
-		 for (int i = 0; i < B.length; i++) { mapB.put(B[i], mapB.getOrDefault(B[i], 0) +1 ); }
+		 for (int i = 0; i < B.length; i++)
+		 { mapB.put( B[i], mapB.getOrDefault(B[i], 0) +1 );
+		  
+		 }
 		
 		 for (int i = 0; i < A.length; i++) { mapA.put(A[i], mapA.getOrDefault(A[i], 0) +1) ;  }
 		 

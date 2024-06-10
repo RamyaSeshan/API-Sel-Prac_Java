@@ -71,7 +71,7 @@ public class Find_all_anagrams_LC_438 {
  *    
  *  
  */
-	 public List<Integer> findAnagrams(String s, String p)
+	 public List<Integer> findAnagrams2(String s, String p)
 	 {
 		 int pointer =0 , i ;		
 		 int pLen = p.length() ;
@@ -112,11 +112,28 @@ public class Find_all_anagrams_LC_438 {
 		 return indexAnagram;
 		 
 	 }
+
+	 public boolean findAnagrams(String s, String p) // anagram usign array
+	 {
+		int[] A = new int[26] ;
+		
+		for (int i = 0; i < s.length(); i++) {			
+			A[i] = s.charAt(i) -'a';
+		}
+		
+		for (int i = 0; i < p.length(); i++) {
+			A[i] = A[i] - p.charAt(i) - 'a' ;
+			if(A[i] == -1) {return false ; }
+		}
+		 
+		 return true;
+		 
+	 }
 @Test
 public void Test1()
 {
 	String s = "cbaebabacd"; String  p = "abc" ;
-	List<Integer> findAnagrams = findAnagrams( s,  p) ;
+	boolean findAnagrams = findAnagrams( s,  p) ;
 	System.out.println(findAnagrams);	
 }
 
@@ -124,7 +141,7 @@ public void Test1()
 public void Test2()
 {
 	String s = "abab"; String  p = "ab" ;
-	List<Integer> findAnagrams = findAnagrams( s,  p) ;
+	boolean findAnagrams = findAnagrams( s,  p) ;
 	System.out.println(findAnagrams);	
 }
 
@@ -133,7 +150,7 @@ public void Test2()
 public void Test3()
 {
 	String s = "ab"; String  p = "abc" ;
-	List<Integer> findAnagrams = findAnagrams( s,  p) ;
+	boolean findAnagrams = findAnagrams( s,  p) ;
 	System.out.println(findAnagrams);	
 }
 
@@ -141,7 +158,7 @@ public void Test3()
 public void Test4()
 {
 	String s = "aa"; String  p = "bb" ;
-	List<Integer> findAnagrams = findAnagrams( s,  p) ;
+	boolean findAnagrams = findAnagrams( s,  p) ;
 	System.out.println(findAnagrams);	
 }
 
@@ -149,7 +166,7 @@ public void Test4()
 public void Test5()
 {
 	String s = "af"; String  p = "be" ;	  
-	List<Integer> findAnagrams = findAnagrams( s,  p) ;
+	boolean findAnagrams = findAnagrams( s,  p) ;
 	System.out.println(findAnagrams);	
 }
 

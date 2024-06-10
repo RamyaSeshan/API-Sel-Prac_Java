@@ -85,10 +85,9 @@ public class Bowling_Game_LC_2660_WEEK9_DAY2
 
 		while (i <= player1.length - 1 )
 		{
-			//System.out.println( " entry i " + i);
+	
 			if (  (i !=0 && player1[i -1 ] ==10 )   ||  (i !=0 && i!= 1 && player1[i -2] ==10 )  )  p1Count = p1Count + 2*player1[i] ;
 			else p1Count = p1Count + player1[i] ;
-
 
 
 			if (  (i !=0 && player2[i -1 ] ==10 )   ||  (i != 0 && i != 1 &&  player2[i -2] ==10 )  )  p2Count = p2Count + 2*player2[i] ;
@@ -96,9 +95,6 @@ public class Bowling_Game_LC_2660_WEEK9_DAY2
 
 			i ++;
 		}
-
-		//System.out.println( " p1Count    " + p1Count);
-		//System.out.println( " p2Count    " + p2Count);
 
 		if( p1Count >  p2Count ) return 1;
 		else if ( p1Count < p2Count ) return 2 ;

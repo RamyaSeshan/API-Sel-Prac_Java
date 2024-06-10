@@ -10,18 +10,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class TC003 {
+	ChromeDriver driver;
 
-
-	@Test (dependsOnMethods ={"Selenium_Marathon.WorkType_Groups.TC001.CreateWork_Type_Group"})
+	@Test (dependsOnMethods ={"Selenium_Marathon.WorkType_Groups.TC001.CreateWork_Type_Group"}) 
 	public void Delete_Type_Group() throws InterruptedException
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 
-		ChromeDriver driver=new ChromeDriver(options);  
+		 driver=new ChromeDriver(options);  
 		driver.manage().window().maximize(); 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));   
@@ -32,7 +33,10 @@ public class TC003 {
 		driver.findElement(By.id("Login")).click();
 
 		driver.findElement(By.xpath("//div[@role='navigation']")).click();
-		driver.findElement(By.xpath("//button[@aria-label='View All Applications']")).click();
+		
+		WebElement ViewApp = driver.findElement(By.xpath("//button[@aria-label='View All Applications']"));
+		wait.until(ExpectedConditions.elementToBeClickable(ViewApp));
+		ViewApp.click();
 
 		WebElement WT_Groups = driver.findElement(By.xpath("//p[text()='Work Type Groups']"));
 		Actions act = new Actions(driver);
@@ -41,8 +45,8 @@ public class TC003 {
 		WT_Groups.click();
 
 		//Thread.sleep(3000);		
-		driver.findElement(By.xpath("(//input[@type='search'])[2]")).sendKeys("Ramya");
-		driver.findElement(By.xpath("(//input[@type='search'])[2]")).sendKeys(Keys.TAB);
+		driver.findElement(By.xpath("//div[@part='input-container']/input[@type='search']")).sendKeys("Ramya");
+		driver.findElement(By.xpath("//div[@part='input-container']/input[@type='search']")).sendKeys(Keys.TAB);
 		
 
 		Thread.sleep(5000);
@@ -64,4 +68,8 @@ public class TC003 {
 	}
 
 
+	@AfterTest
+	public void afterSetup() {		
+		driver.close();
+	}
 }

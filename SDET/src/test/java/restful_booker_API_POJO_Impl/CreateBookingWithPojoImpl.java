@@ -2,9 +2,12 @@ package restful_booker_API_POJO_Impl;
 
 import org.testng.annotations.Test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.restassured.RestAssured;
 
-public class CreateBookingWithPojoImpl extends BaseClass{ //
+public class CreateBookingWithPojoImpl extends BaseClass{  //
 
 
 	BookingDates_PoJo BookingPojo = new BookingDates_PoJo("2018-01-01" ,"2019-01-01");
@@ -12,7 +15,7 @@ public class CreateBookingWithPojoImpl extends BaseClass{ //
 	CreateBooking_Pojo CreateBookPojo =new CreateBooking_Pojo("FN123","LN123",1000,true, BookingPojo,"Breakfast");
 	
 	@Test
-	public void CreateBooking ()
+	public void CreateBooking () throws JsonProcessingException
 	{
 
 		//RestAssured.baseURI =baseURI;
@@ -26,6 +29,14 @@ public class CreateBookingWithPojoImpl extends BaseClass{ //
 		//Booking_ID =response.jsonPath().get("bookingid");
 		 Booking_ID =response.jsonPath().getInt("bookingid");
 		System.out.println("Booking Id is "+ Booking_ID) ;
+		
+		// Using ObjecMapper in Jacson Databind lib to serialize POJO 
+		ObjectMapper mapper = new ObjectMapper();
+		String writeValueAsString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(CreateBookPojo) ;
+		
+		System.out.println("------------ FROM OBJECT MAPPER -----------");
+		System.out.println(writeValueAsString);
+		System.out.println("----------  FROM OBJECT MAPPER  -------------");
 		
 		// this is deserialization to get response values from response as Object instead  of Json
 	
@@ -41,9 +52,7 @@ public class CreateBookingWithPojoImpl extends BaseClass{ //
 	  		+ "getbookingid is --- "+"   "+ Booking_ID_fromPOJO 
 	  		+"checkin is  ---"+"   "+ checkin 
 	  		+"firstname is --- " +"    "+ firstname_from_POJO);
-		
-		
-		
+	
 	}
 
 } 

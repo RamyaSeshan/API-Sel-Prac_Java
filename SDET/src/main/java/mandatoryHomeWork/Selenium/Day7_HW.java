@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class Day7_HW {
 
 	@Test
-	public void test1() throws InterruptedException {
+	public void test1() throws InterruptedException {//
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
@@ -54,6 +54,8 @@ public class Day7_HW {
 			System.out.println("Parent Window Title ---> "+ ParentWinTitle);
 	
 	}
+	
+
 
 	}
 

@@ -9,10 +9,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class TC001 { 
-
+	ChromeDriver driver;
 
 	@Test
 	public void CreateWork_Type_Group() throws InterruptedException
@@ -20,7 +21,7 @@ public class TC001 {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 
-		ChromeDriver driver=new ChromeDriver(options);  
+		 driver=new ChromeDriver(options);  
 		driver.manage().window().maximize();   
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));   
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
@@ -61,8 +62,12 @@ public class TC001 {
 
 		System.out.println(text);
 
-
-
+	}
+	
+	
+	@AfterTest
+	public void afterSetup() {		
+		driver.close();
 	}
 
 }

@@ -37,7 +37,7 @@ public class SubArraySizeK_LC_1343_WEEK8_DAY2
 			if ( avg >= threshold  ) count = count+1 ;
 			
 			CurrentSum = CurrentSum + arr[pointer ] ;
-			CurrentSum = CurrentSum- arr [ pointer - k  ];
+			CurrentSum = CurrentSum - arr[ pointer - k  ];
 			
 			pointer++ ;			
 		}

@@ -9,7 +9,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class BaseClass {
-	//https://restful-booker.herokuapp.com/apidoc/index.html
+	//https://restful-booker.herokuapp.com/apidoc/index.html //
 
 	public static String baseURI ="https://restful-booker.herokuapp.com/";
 	Response response;

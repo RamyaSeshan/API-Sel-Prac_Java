@@ -60,6 +60,7 @@ public class Equivalent_Domino_Pairs_LC_1128_Week11_Day1
 			{
 				map.put(list, map.get(list) + 1 ) ;
 				pairs = pairs + map.get(list) ;
+				System.out.println("pairs --- " +pairs);//4 , 
 			}else 
 				map.put(list,0) ;
 		}

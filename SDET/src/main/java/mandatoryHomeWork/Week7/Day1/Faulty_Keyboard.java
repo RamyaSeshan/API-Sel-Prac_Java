@@ -78,11 +78,8 @@ iterate thru while loop till condition  sb.contains("i")  while (sb.contains("i"
 	 */
 
 
-	public String finalString(String s) { //poiintier  opintier  potier  toper
-		StringBuffer A = new StringBuffer() ;
-		StringBuffer B = new StringBuffer() ;
-		StringBuffer sb = new StringBuffer(s) ;
-		
+	public String finalString1(String s) { 
+				
 		if (!s.contains("i")) { return s ; } 
 		
 		 while (s.contains("i") )
@@ -96,12 +93,9 @@ iterate thru while loop till condition  sb.contains("i")  while (sb.contains("i"
 				 s= rev(s.substring(0,s.length()-1 ));
 			 }else 
 			 {
-				 String str1 = rev(s.substring(0, s.indexOf("i") ) );
-				// System.out.println("str1---" +str1);	
-				 String str2 = s.substring(s.indexOf("i")+1 );
-				 //System.out.println("str2---" +str2);
-				 s= str1+str2 ;
-				 //System.out.println("string is ---" +s);
+				 String str1 = rev(s.substring(0, s.indexOf("i") ) );			
+				 String str2 = s.substring(s.indexOf("i")+1 );				
+				 s= str1+str2 ;				
 			 }
 		 }
 
@@ -115,7 +109,18 @@ iterate thru while loop till condition  sb.contains("i")  while (sb.contains("i"
 			A.append(S.charAt(i));
 		}return A.toString();	
 	}
-	
+
+	public String finalString(String s)
+	{
+		StringBuffer sb = new StringBuffer();
+		
+		for (int i = 0; i < s.length() ; i++) {
+			if(s.charAt(i) == 'i') sb.reverse() ;
+			else sb.append(s.charAt(i)) ;
+		}
+		
+		return sb.toString();
+	}
 
 @Test
 public void Test1()
@@ -168,7 +173,7 @@ public void Test6()
 @Test
 public void Test7()
 {
-	String s = "poiintier";
+	String s = "poiintier";  
 	String finalString = finalString( s);
 	System.out.println("test 7 is --> "+ finalString);	
 }

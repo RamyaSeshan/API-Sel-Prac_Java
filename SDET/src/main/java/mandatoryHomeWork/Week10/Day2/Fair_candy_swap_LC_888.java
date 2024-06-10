@@ -9,7 +9,7 @@ public class Fair_candy_swap_LC_888 {
 	
 	//https://leetcode.com/problems/fair-candy-swap/
 	
-	/*
+	/* Time Complexity : O[N ] + O [N]  ; Space Complexity - O[N]
 	 * PSUEDO code
 	 *   1.Get total sum of aliceCandies and Bob Candies 
 	 *   2.Put one of the person candies ina set 
@@ -34,10 +34,8 @@ public class Fair_candy_swap_LC_888 {
 			aliceTotal += j ;
 			set.add(j);
 		} 
-		
-		System.out.println(set);
-		int diff = (aliceTotal -bobTotal  )/2;
-		System.out.println(diff);
+	
+		int diff = (aliceTotal -bobTotal  )/2;	
 		
 		for (int bobCandie : bobSizes) {
 			

@@ -14,6 +14,15 @@ public class ValidParanthesis_Stack {
 		System.out.println(valid);
 		
 	}
+	
+	@Test
+	public void Test2()
+	{
+		String s = "()[]{}}" ;
+		boolean valid = isValid( s);
+		System.out.println("The value is " + valid);}
+	
+	
 
 	public boolean isValid(String s) {
 

@@ -6,6 +6,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
+//https://leetcode.com/problems/summary-ranges/submissions/ 
 /*
  * PSUEDO CODE
  * Did i understand the problem
@@ -24,12 +25,12 @@ public class SummaryRanges_LC_228 {
 		List<String> list = new  ArrayList<String>();
 		int  RangeStart ;int cnt;
 		
-		if(nums.length != 0)
+		if(nums.length != 0)  // O[1]
 		{ RangeStart = nums[0];  cnt=0;}
 		else return list;
          
 	
-		for (int i = 0; i < nums.length; i++) {
+		for (int i = 0; i < nums.length; i++) { //O[N]
 
 			if(i+1 < nums.length && nums[i]+1 == nums[i+1] ) {cnt = cnt +1;} // cnt 1
 			else if((i+1 < nums.length && nums[i]+1 != nums[i+1])  || i == nums.length-1) 

@@ -1,7 +1,7 @@
 package DSA_DailyConnect;
 
 import org.junit.Test;
-//https://leetcode.com/problems/is-subsequence/description/?envType=daily-question&envId=2023-09-22
+//https://leetcode.com/problems/is-subsequence/submissions/
 
 public class Is_subsequence_LC_392 {
 	
@@ -50,9 +50,13 @@ No
 	
 public boolean isSubsequence(String s, String t) {
 	
+	if(s.length() > t.length() ) return false;
+	else if (s.equals("")) return true ;
+	else if (s.length()==0 || t.length()== 0) return false ;	
+	
 	int sPointer =0 ,tPointer = 0 ;
 	
-	while (tPointer < t.length() &&  sPointer <s.length())   // s = "adg"; String  t = "ahbgdc" ;
+	while (tPointer < t.length() &&  sPointer <s.length())  
 	{
 		if(t.charAt(tPointer) == s.charAt(sPointer)) 
 		{		
@@ -89,4 +93,11 @@ public void Test3()
 	System.out.println(subsequence);
 }
 
+@Test
+public void Test4()
+{
+	String s = ""; String  t = "ahbgdc" ;
+	boolean subsequence = isSubsequence( s,  t);
+	System.out.println(subsequence);
+}
 }

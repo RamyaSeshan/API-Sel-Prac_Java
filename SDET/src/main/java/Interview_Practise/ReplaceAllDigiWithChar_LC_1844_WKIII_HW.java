@@ -21,7 +21,7 @@ public class ReplaceAllDigiWithChar_LC_1844_WKIII_HW
 	}
 	
 
-	public String replaceDigits(String s) 
+	public String replaceDigits(String s)  // took 0 ms 
 	{
 		int val ;
 		char[] charArray = s.toCharArray() ;
@@ -37,6 +37,7 @@ public class ReplaceAllDigiWithChar_LC_1844_WKIII_HW
 			val =0 ;
 		} 
          return String.valueOf(charArray) ;
+         
 	}
 	
 	

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 
-public class Delete extends BaseClass {
+public class Delete extends BaseClass { //
 	
 	public String Auth ="Basic YWRtaW46cGFzc3dvcmQxMjM=";
 	

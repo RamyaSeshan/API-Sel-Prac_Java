@@ -41,6 +41,7 @@ public class firstPalinStr_LC_2108_firstPalinStr
 			flag = revStr(words[i])  ;
 			if (flag) return  words[i];
 		}
+		
 		return "";
 	}
 

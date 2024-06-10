@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class GetBookingID_FromName extends BaseClass{
+public class GetBookingID_FromName extends BaseClass{ //
 
 	@Test (dependsOnMethods ={"restful_booker_API_POJO_Impl.CreateBookingWithPojoImpl.CreateBooking"})
 	public void getBookID_FromName() //

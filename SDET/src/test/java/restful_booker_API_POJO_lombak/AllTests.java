@@ -59,8 +59,9 @@ public class AllTests extends BaseClass{
 		// this is deserialization to get token from response as Object instead  of Json
 		//Token_POJO is its POjo class 
 		Token_POJO token_POJO = response.getBody().as(Token_POJO.class);
-
+	
 		token_fromPOJO=token_POJO.getToken();
+		
 		System.out.println("Token from Deserialization.... "+ token_fromPOJO);
 
 		Assert.assertEquals(response.getStatusCode(), statusCode);

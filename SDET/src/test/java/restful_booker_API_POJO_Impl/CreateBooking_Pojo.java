@@ -9,7 +9,7 @@ public class CreateBooking_Pojo {
 	private String additionalneeds;	
 	private BookingDates_PoJo bookingdates;
 	
-	public CreateBooking_Pojo()
+	public CreateBooking_Pojo() //
 	  {	  	  }
 	
 	

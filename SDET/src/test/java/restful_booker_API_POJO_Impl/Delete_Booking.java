@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 public class Delete_Booking  extends BaseClass{
 	
 	
-	@Test  //(dependsOnMethods = {"restful_booker_APIAuto.Healthcheck.CreateBooking"})
+	@Test  //(dependsOnMethods = {"restful_booker_APIAuto.Healthcheck.CreateBooking"}) //
 	public void DeleteBooking()
 	{
 		response= RestAssured.given()

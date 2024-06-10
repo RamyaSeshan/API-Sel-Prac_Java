@@ -29,7 +29,7 @@ public class HalfSrt_LC_1704_WKIIICW
 	}
 	
 
-	public boolean halvesAreAlike_A1(String s) { // ab cd 
+	public boolean halvesAreAlike_A1(String s) { // took 5 ms 
 		
 		int lenght = s.length() / 2 ;
 		
@@ -48,13 +48,12 @@ public class HalfSrt_LC_1704_WKIIICW
 		
 	}
 	
-	public boolean halvesAreAlike(String s)
+	public boolean halvesAreAlike(String s) // took 9 ms 
 	{
 		
 		int cntF = 0 , cntL =0  ;
 		String lowerCase = s.toLowerCase() ;
-		System.out.println("---------"  + lowerCase);
-		
+			
 		for (int i = 0; i < s.length() /2; i++) 
 		{
 			if (lowerCase.charAt(i) == 'a' || lowerCase.charAt(i) == 'e'   || lowerCase.charAt(i) == 'i' || lowerCase.charAt(i) == 'o'  || lowerCase.charAt(i) == 'u'   ) 
@@ -65,8 +64,7 @@ public class HalfSrt_LC_1704_WKIIICW
 		{
 			if (lowerCase.charAt(i) == 'a' || lowerCase.charAt(i) == 'e'   || lowerCase.charAt(i) == 'i' || lowerCase.charAt(i) == 'o'  || lowerCase.charAt(i) == 'u'   ) 
 				cntL = cntL +1 ;
-		}
-		
+		}		
 		
 		return cntF == cntL;
 		

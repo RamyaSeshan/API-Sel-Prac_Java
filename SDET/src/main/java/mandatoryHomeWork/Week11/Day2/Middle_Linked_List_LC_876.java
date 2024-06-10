@@ -32,16 +32,14 @@ public ListNode middleNode(ListNode head) {
 		  index ++;
 	  }
 	
-	  size = index ;
-	  System.out.println(size);
+	  size = index ;	
 	  middleIndex = size/2 ;
 	
 	 while (currentIndex != middleIndex)
 	 {
 		 head = head.next ;
 		 currentIndex++ ;		 
-	 }
-	
+	 }	
 	return head;
         
     }

@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class StriaghtLine_LC_1232 {
+	//https://leetcode.com/problems/check-if-it-is-a-straight-line/ 
 	
 	/*
 	 * PSUEDO CODE 
@@ -44,6 +45,15 @@ public class StriaghtLine_LC_1232 {
 	{
 		int[][] A = {{1,1},{2,2},{3,4} ,{4,5},{5,6},{7,7}};
 		Assert.assertEquals(TwoDimArray(A), false);
+	}
+	
+	
+
+	@Test
+	public void test3()
+	{
+		int[][] A = {{1,1},{2,2},{3,3} ,{4,4},{5,5},{7,7}};
+		Assert.assertEquals(TwoDimArray(A), true);
 	}
 
 }
